@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Restaurant Predictions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Zomato Restaurant Predictions for Bangalore</h1>
+        <p>Based on historical data, we predict the following:</p>
+        <ul>
+            <li>Most liked dish types</li>
+            <li>Types of restaurant categories</li>
+            <li>Popular restaurant types</li>
+            <li>Average cost for two persons</li>
+            <li>Franchise popularity and count</li>
+            <li>Availability of delivery option</li>
+            <li>Effect of location on ratings</li>
+            <li>Book table facility</li>
+        </ul>
+        <p>Feel free to explore the insights!</p>
+
+        <label for="cityDropdown">Select a city:</label>
+        <select id="cityDropdown">
+            <option value="Bangalore">Bangalore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <!-- Add more cities here -->
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Restaurant Name</th>
+                    <th>Takes Online Orders</th>
+                    <th>Has Table Booking</th>
+                    <th>Restaurant Type</th>
+                    <th>Votes</th>
+                    <th>Cuisines</th>
+                    <th>Cost for Two</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populate data dynamically using JavaScript or backend -->
+                <!-- Example row: -->
+                <tr>
+                    <td>Sample Restaurant</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>North Indian</td>
+                    <td>500</td>
+                    <td>Indian, Chinese</td>
+                    <td>$30</td>
+                    <td>Bangalore</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+s
