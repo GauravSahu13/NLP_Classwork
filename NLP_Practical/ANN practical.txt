@@ -1,0 +1,76 @@
+!pip install tensorflow-gpu
+                                                        tensorflow ---> google 
+														tensorflow + keras 
+														pytorch ---> facebook
+import tensorflow as tf
+tf.__version__     > 2.4
+
+import pandas,numpy, matplotlib.pyplot
+
+df = pd.read_csv("csv file")
+
+dependent and independent
+x = df.iloc[rowstart: rowend,columnstarts:columnend]
+y = df.iloc[:,13]
+
+feature engineering ---> OHE
+pd.get_dummies(x['col'], drop_first = True)
+pd.concat([x,col],axis=1)
+
+Splitting into train test set
+
+feature scaling
+
+
+# ANN
+
+from tensorflow.keras.models import Sequential  				 	---> entire block ( forward + backward) 
+from tensorflow.keras.layers import Dense							---> neurons, hidden, i/p , o/p layers
+from tensorflow.keras.layers import LeakyRelu, Prelu, ELU, ReLU		
+from tensorflow.keras.layers import Dropout							---> to reduce Overfitting (like 0.3 --> 30% neuron deactivated)
+	
+classifier = Sequential()  ---> initialize ANN
+
+classifier.add(Dense(units = 11, activation = 'relu))  --> Input layers
+classifier.add(Dense(units = 7, activation = 'relu))	--> hidden layers
+classifier.add(Dropout(0.2))
+
+classifier.add(Dense(units = 6, activation = 'relu))	--> hidden 2
+classifier.add(Dropout(0.3))
+
+classifier.add(Dense(units = 1, activation = 'sigmoid')) --> output layers
+
+classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics=['accuracy'])
+
+# Early Stopping ---> same accuracy will stop
+early_stopping = tf.keras.callbacks.EarlyStopping()
+
+# model Train
+model_history = classifier.fit(X_train,y_train, validation_split=0.33, batch_size = 10, epochs=1000, callbacks=early_stopping)
+
+model_history.history.keys()
+
+plot ( accuracy vs epochs)
+
+
+
+# predicting the test datase
+
+y_pred = classifier.predict(X_test)
+y_pred = (y_pred >= 0.5)
+
+make confusion matrics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
